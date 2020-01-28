@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root {
+  min-height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: linear-gradient(to bottom, #F4F4F4, #E2E7F3) no-repeat;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body, input, button {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 80px auto 0 auto;
+  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  width: 100%;
+  margin-top: 150px;
+  padding: 40px 40px 0 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container img {
+  width: 100px;
+}
+
+.content h1 {
+  font-family: 'Vollkorn', serif;
+  font-size: 36px;
+  color: #1C365A;
+}
+
+.content p {
+  font-size: 22px;
+  line-height: 30px;
+  color: #A8B3BF;
+  margin-top: 10px;
+}
+
+.content button {
+  border: none;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-top: 60px;
+  float: right;
+  background: #00609c;
+  color: #FFF;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.content button:hover {
+  background: #00558a;
 }
