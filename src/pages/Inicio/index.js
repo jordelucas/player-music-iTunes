@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../assets/logo.svg'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
-export default function Inicio() {
+export default function Inicio({ history }) {
     return (
         <>
             <img src={logo} alt="logomarca"/>
@@ -14,7 +14,7 @@ export default function Inicio() {
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit
                 </p>
 
-                <button><ChevronRightIcon /></button> 
+                <button onClick={() => history.push('/searchartist')}><ChevronRightIcon /></button> 
             </div>
         </>
     )
