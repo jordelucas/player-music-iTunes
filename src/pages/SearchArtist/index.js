@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import api from '../../services/api'
+import BtnPrevious from '../../components/BtnPrevious'
 
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SearchIcon from '@material-ui/icons/Search';
 import artistProfile from '../../assets/artist.svg';
@@ -36,7 +36,10 @@ export default function SearchArtist({ history }) {
     return (
         <>
             <header>
-                <button className="previous" onClick={() => history.push('/')}><KeyboardBackspaceIcon /></button>
+                <BtnPrevious 
+                    link='/' 
+                    history={history}
+                />
                 
                 <div className="search">
                     <input 

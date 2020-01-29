@@ -3,15 +3,6 @@ header, main {
     padding: 0px 40px;
 }
 
-header .previous {
-    width: 24px;
-    height: 24px;
-    border: none;
-    border-radius: 50px;
-    background: none;
-    color: #00609c;
-}
-
 header .search {
     margin-top: 20px;
     display: flex;

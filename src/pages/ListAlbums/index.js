@@ -1,4 +1,5 @@
 import React from 'react'
+import BtnPrevious from '../../components/BtnPrevious'
 
 // https://itunes.apple.com/lookup?id=159260351&entity=album
 
@@ -7,7 +8,12 @@ export default function ListAlbums({ history }) {
     
     return (
         <>
-            <h1>{artist_id}</h1>
+            <div className="header">
+                <BtnPrevious 
+                    link='/searchartist'
+                    history={history}
+                />
+            </div>
         </>
     )
 }
