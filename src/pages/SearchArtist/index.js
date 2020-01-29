@@ -1,15 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import api from '../../services/api'
+
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SearchIcon from '@material-ui/icons/Search';
+import artistProfile from '../../assets/artist.svg';
 
 import './styles.css'
 
 export default function SearchArtist({ history }) {
+    const [artists, setArtists] = useState([])
+    
+    useEffect(() => {
+        async function loadArtists() {
+            const response = await api.get('search?term=pedro&entity=musicArtist&limit=10');
+            
+            setArtists(response.data.results);
+        }
+
+        loadArtists()
+    }, [])
+
     return (
         <>
             <header>
-                <button class="previous" onClick={() => history.push('/')}><KeyboardBackspaceIcon /></button>
+                <button className="previous" onClick={() => history.push('/')}><KeyboardBackspaceIcon /></button>
                 
                 <form>
                     <input type="text"placeholder="Artist" />
@@ -19,16 +34,18 @@ export default function SearchArtist({ history }) {
 
             <main>
                 <ul>
-                    <li className="artist-item" onClick={() => history.push('/listalbums')}>
-                        <img src="https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/60x60bb.jpg" alt="artist-name"/>
-                        
-                        <div className="artist-info">
-                            <strong>Nome</strong>
-                            <span>Genero</span>
-                        </div>
+                    {artists.map(artist => (
+                        <li key={artist.artistId} className="artist-item">
+                            <img src={artistProfile} alt={artist.artistName} />
+                            
+                            <div className="artist-info">
+                                <strong>{artist.artistName}</strong>
+                                <span>{artist.primaryGenreName}</span>
+                            </div>
 
-                        <button className='view-artist'><ChevronRightIcon /></button>
-                    </li>
+                            <button className='view-artist'><ChevronRightIcon /></button>
+                        </li>
+                    ))}
                 </ul>
             </main>
         </>

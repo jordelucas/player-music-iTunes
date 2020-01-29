@@ -9,7 +9,7 @@ header .previous {
     border: none;
     border-radius: 50px;
     background: none;
-    color: #1C365A;
+    color: #00609c;
 }
 
 header form {
@@ -63,7 +63,6 @@ main ul {
     border-radius: 50%;
 }
 
-
 .artist-item .artist-info {
     width: 100%;
     margin-left: 10px;
@@ -72,7 +71,7 @@ main ul {
 .artist-item .view-artist {
     border: none;
     background: none;
-    color: #1C365A;
+    color: #00609c;
     cursor: pointer;
 }
 
