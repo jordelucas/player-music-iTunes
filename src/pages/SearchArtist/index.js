@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import api from '../../services/api'
 import BtnPrevious from '../../components/BtnPrevious'
+import BtnNext from '../../components/BtnNext'
 
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SearchIcon from '@material-ui/icons/Search';
@@ -35,7 +36,7 @@ export default function SearchArtist({ history }) {
 
     return (
         <>
-            <header>
+            <header className="search">
                 <BtnPrevious 
                     link='/' 
                     history={history}
@@ -55,7 +56,7 @@ export default function SearchArtist({ history }) {
                 </div>
             </header>
 
-            <main>
+            <main className="listArtists">
                 <ul>
                     {artists.map(artist => (
                         <li key={artist.artistId} className="artist-item" onClick={() => handleSearch(artist.artistId)} >
@@ -65,8 +66,8 @@ export default function SearchArtist({ history }) {
                                 <strong>{artist.artistName}</strong>
                                 <span>{artist.primaryGenreName}</span>
                             </div>
-
-                            <button className='view-artist'><ChevronRightIcon /></button>
+                            
+                            <BtnNext />
                         </li>
                     ))}
                 </ul>

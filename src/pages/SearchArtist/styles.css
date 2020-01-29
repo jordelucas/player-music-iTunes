@@ -1,8 +1,3 @@
-header, main {
-    width: 100%;
-    padding: 0px 40px;
-}
-
 header .search {
     margin-top: 20px;
     display: flex;
@@ -31,11 +26,7 @@ header .search label {
     cursor: pointer;
 }
 
-main {
-    margin-top: 30px;
-}
-
-main ul {
+.listArtists ul {
     list-style: none;
 }
 
@@ -58,13 +49,6 @@ main ul {
 .artist-item .artist-info {
     width: 100%;
     margin-left: 10px;
-}
-
-.artist-item .view-artist {
-    border: none;
-    background: none;
-    color: #00609c;
-    cursor: pointer;
 }
 
 .artist-info strong {

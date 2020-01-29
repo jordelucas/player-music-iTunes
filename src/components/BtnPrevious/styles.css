@@ -5,4 +5,5 @@ button.previous {
     border-radius: 50px;
     background: none;
     color: #00609c;
+    cursor: pointer;
 }
