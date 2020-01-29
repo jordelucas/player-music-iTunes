@@ -12,13 +12,13 @@ header .previous {
     color: #00609c;
 }
 
-header form {
+header .search {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
 
-header form input {
+header .search input {
     height: 35px;
     width: 100%;
     margin-right: 10px;
@@ -28,15 +28,16 @@ header form input {
     color: #1C365A;
 }
 
-header form input::placeholder {
+header .search input::placeholder {
     color: #1C365A;
 }
 
-header form button {
+header .search label {
     border: none;
     border-radius: 50px;
     background: none;
     color: #1C365A;
+    cursor: pointer;
 }
 
 main {

@@ -18,12 +18,12 @@ export default function SearchArtist({ history }) {
     }
 
     useEffect(() => {
-        loadArtists('angel')
+        loadArtists('taylor')
     }, [])
 
     useEffect(() => {
         if(artistSearch !== '') {
-            loadArtists(artistSearch)
+            loadArtists(artistSearch.replace(' ', '+'))
         }
     }, [artistSearch])
 
@@ -32,17 +32,18 @@ export default function SearchArtist({ history }) {
             <header>
                 <button className="previous" onClick={() => history.push('/')}><KeyboardBackspaceIcon /></button>
                 
-                <form>
+                <div className="search">
                     <input 
                         type="text"
-                        name="artist"
+                        id="artist_name"
+                        name="artist_name"
                         placeholder="Artist"
                         value={artistSearch}
                         onChange={e => setArtistSearch(e.target.value)}
                         required
                     />
-                    <button><SearchIcon/></button>
-                </form>
+                    <label htmlFor="artist_name"><SearchIcon/></label>
+                </div>
             </header>
 
             <main>
