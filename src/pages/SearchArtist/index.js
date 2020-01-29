@@ -10,16 +10,22 @@ import './styles.css'
 
 export default function SearchArtist({ history }) {
     const [artists, setArtists] = useState([])
-    
-    useEffect(() => {
-        async function loadArtists() {
-            const response = await api.get('search?term=pedro&entity=musicArtist&limit=10');
-            
-            setArtists(response.data.results);
-        }
+    const [artistSearch, setArtistSearch] = useState('');
 
-        loadArtists()
+    async function loadArtists(name) {
+        const response = await api.get(`search?term=${name}&entity=musicArtist&limit=10`);
+        setArtists(response.data.results);
+    }
+
+    useEffect(() => {
+        loadArtists('angel')
     }, [])
+
+    useEffect(() => {
+        if(artistSearch !== '') {
+            loadArtists(artistSearch)
+        }
+    }, [artistSearch])
 
     return (
         <>
@@ -27,7 +33,14 @@ export default function SearchArtist({ history }) {
                 <button className="previous" onClick={() => history.push('/')}><KeyboardBackspaceIcon /></button>
                 
                 <form>
-                    <input type="text"placeholder="Artist" />
+                    <input 
+                        type="text"
+                        name="artist"
+                        placeholder="Artist"
+                        value={artistSearch}
+                        onChange={e => setArtistSearch(e.target.value)}
+                        required
+                    />
                     <button><SearchIcon/></button>
                 </form>
             </header>
