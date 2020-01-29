@@ -1,0 +1,7 @@
+button.play {
+    border: none;
+    border-radius: 50px;
+    background: none;
+    color: #0becd3;
+    cursor: pointer;
+}
