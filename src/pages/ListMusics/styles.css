@@ -1,0 +1,29 @@
+header .title.album  {
+    text-align: center;
+}
+
+main .openOn {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1C365A;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+main ul a {
+    text-decoration: none;
+}
+
+.music-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.music-item img {
+    border-radius: 50%;
+}

@@ -28,6 +28,12 @@ export default function ListAlbums({ history }) {
         return year;
     }
 
+    function handleNext(id) {
+        localStorage.setItem('album', id)
+
+        history.push('/listmusics');
+    }
+
 
     return (
         <>
@@ -43,10 +49,9 @@ export default function ListAlbums({ history }) {
                 </div>
             </header>
             <main>
-                {console.log(albums)}
                 <ul>
                 {albums.map(album => (
-                    <li key={album.collectionId} className="album-item">
+                    <li key={album.collectionId} className="album-item" onClick={() => handleNext(album.collectionId)}>
                         <img src={album.artworkUrl100} alt={album.collectionName} />
                         
                         <div className="album-info">
