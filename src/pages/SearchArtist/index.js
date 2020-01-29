@@ -27,6 +27,12 @@ export default function SearchArtist({ history }) {
         }
     }, [artistSearch])
 
+    function handleSearch(id) {
+        localStorage.setItem('artist', id)
+
+        history.push('/listalbums');
+    }
+
     return (
         <>
             <header>
@@ -49,7 +55,7 @@ export default function SearchArtist({ history }) {
             <main>
                 <ul>
                     {artists.map(artist => (
-                        <li key={artist.artistId} className="artist-item">
+                        <li key={artist.artistId} className="artist-item" onClick={() => handleSearch(artist.artistId)} >
                             <img src={artistProfile} alt={artist.artistName} />
                             
                             <div className="artist-info">

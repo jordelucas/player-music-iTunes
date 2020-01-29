@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Inicio from './pages/Inicio'
 import SearchArtist from './pages/SearchArtist'
-// import ListAlbums from './pages/ListAlbums'
+import ListAlbums from './pages/ListAlbums'
 
 export default function Routes() {
     return (
@@ -11,6 +11,7 @@ export default function Routes() {
             <Switch>
                 <Route path='/' exact component={Inicio} />
                 <Route path='/searchartist' component={SearchArtist} />
+                <Route path='/listAlbums' component={ListAlbums} />
             </Switch>    
         </BrowserRouter>
     )
