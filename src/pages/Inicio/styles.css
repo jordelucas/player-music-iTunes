@@ -1,0 +1,40 @@
+.apresentation-block {
+    width: 100%;
+    margin-top: 150px;
+    padding: 40px 40px 0 40px;
+}
+
+#logo {
+    margin-top: 40px;
+    width: 100px;
+}
+
+.apresentation-block strong {
+    font-size: 36px;
+    color: #1C365A;
+}
+
+.apresentation-block p {
+    font-size: 22px;
+    line-height: 30px;
+    color: #A8B3BF;
+    margin-top: 10px;
+}
+
+.apresentation-block button {
+    border: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+    float: right;
+    background: #00609c;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apresentation-block button:hover {
+    background: #00558a;
+}
+  

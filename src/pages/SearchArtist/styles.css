@@ -1,0 +1,88 @@
+header, main {
+    width: 100%;
+    padding: 0px 40px;
+}
+
+header .previous {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50px;
+    background: none;
+    color: #1C365A;
+}
+
+header form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+header form input {
+    height: 35px;
+    width: 100%;
+    margin-right: 10px;
+    border: 0;
+    font-size: 32px;
+    background: none;
+    color: #1C365A;
+}
+
+header form input::placeholder {
+    color: #1C365A;
+}
+
+header form button {
+    border: none;
+    border-radius: 50px;
+    background: none;
+    color: #1C365A;
+}
+
+main {
+    margin-top: 30px;
+}
+
+main ul {
+    list-style: none;
+}
+
+.artist-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.artist-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+.artist-item .artist-info {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.artist-item .view-artist {
+    border: none;
+    background: none;
+    color: #1C365A;
+    cursor: pointer;
+}
+
+.artist-info strong {
+    display: block;
+    font-size: 14px;
+    color: #1C365A;
+}
+
+.artist-info span {
+    font-size: 12px;
+    color: #A8B3BF;
+}

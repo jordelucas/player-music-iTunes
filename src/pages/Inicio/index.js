@@ -2,13 +2,15 @@ import React from 'react'
 import logo from '../../assets/logo.svg'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
+import './styles.css'
+
 export default function Inicio({ history }) {
     return (
         <>
-            <img src={logo} alt="logomarca"/>
+            <img id="logo" src={logo} alt="logomarca"/>
         
-            <div className="content">
-                <h1>iTunes - Music </h1>
+            <div className="apresentation-block">
+                <strong>iTunes - Music </strong>
 
                 <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit
